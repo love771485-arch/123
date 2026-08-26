@@ -7,11 +7,11 @@ import numpy as np
 from datetime import datetime, timedelta, timezone
 
 # ==================== CONFIGURATION ====================
-BOT_TOKEN = '8870710130:AAE4aTlxPbYMSbycv4HkPaTieixYomtJCgA'
-GITHUB_TOKEN = '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'
-ADMIN_ID = "1902386824"
-REPO_OWNER = "ahanthbot"
-REPO_NAME = "aaaaa"
+BOT_TOKEN = '8992170863:AAHF8KhZYqIL6mESPXCdjXjRUeo-fqZGJ8c'
+GITHUB_TOKEN = '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'
+ADMIN_ID = "7642599503"
+REPO_OWNER = "thant57512-tech"
+REPO_NAME = "123"
 CONCURRENCY = 500
 BATCH_SIZE = 500
 # =======================================================
