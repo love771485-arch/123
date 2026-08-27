@@ -92,20 +92,10 @@ async def start(message):
 
 @bot.message_handler(commands=['key'])
 async def handle_key(message):
-    key = str(message.chat.id)
-    auth_list, _ = await get_file_content("auth_list.json")
-    if key in auth_list:
-        valid = check_key_expiration(auth_list[key])
-        if valid:
-            approve[message.chat.id] = True
-            user_data[message.chat.id] = {}
-            await bot.reply_to(message, "Key မှန်ကန်ပါသည်။ /input ဖြင့် Session URL ထည့်ပါ။")
-        else:
-            approve[message.chat.id] = False
-            await bot.reply_to(message, "Key Expired ဖြစ်နေပါသည်။")
-    else:
-        await bot.reply_to(message, "သင်၏ key ကို registered မလုပ်ရသေးပါ။")
-
+    approve[message.chat.id] = True
+    user_data[message.chat.id] = {}
+    await bot.reply_to(message, "Key Approved!")
+    
 @bot.message_handler(commands=['listkeys'])
 async def listkeys(message):
     if str(message.chat.id) != ADMIN_ID:
